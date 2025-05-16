@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bubbly Booth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>LingNgay</h2>
+  </header>
+
+  <main id="mainSection">
+    <div id="afterButtons" style="display: none; margin-top: 20px;">
+      <button id="editBtn">🛠 Edit Photos</button>
+      <button id="retakeBtn">🔁 Retake</button>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn">📸 Take a Photo</button>
+    </div>
+
+    <div class="camera-wrapper">
+      <video id="camera" autoplay playsinline></video>
+      <div id="countdown">Get ready...</div>
+    </div>
+
+    <div class="thumbnails">
+      <div class="thumb"><img alt="1" /></div>
+      <div class="thumb"><img alt="2" /></div>
+      <div class="thumb"><img alt="3" /></div>
+      <div class="thumb"><img alt="4" /></div>
+    </div>
+
+    <div id="message" class="star-message">You're a star!</div>
+  </main>
+
+  <section id="editSection" style="display: none;">
+    <div class="edit-container">
+      <div class="photostrip-preview" id="photostripPreview"></div>
+      <div class="edit-tools">
+        <h3>Stickers</h3>
+        <div class="stickers">
+          <img src="stickers/eat.73b46210.svg" class="sticker-option" />
+          <img src="stickers/1.png" class="sticker-option" />
+          <img src="stickers/2.png" class="sticker-option" />
+          <button id="removeStickers">🗑</button>
+        </div>
+
+        <h3>Photostrip</h3>
+        <div class="colors" id="frameColors">
+          <div class="color black selected" data-color="#000"></div>
+          <div class="color white" data-color="#fff"></div>
+          <div class="color pink" data-color="#fce4ec"></div>
+          <div class="color beige" data-color="#fdf1dc"></div>
+          <div class="color blue" data-color="#e3f2fd"></div>
+          <div class="color yellow" data-color="#fff9c4"></div>
+        </div>
+
+        <h3>Background</h3>
+        <div class="colors" id="bgColors">
+          <div class="color black selected" data-color="#000"></div>
+          <div class="color white" data-color="#fff"></div>
+          <div class="color pink" data-color="#fce4ec"></div>
+          <div class="color beige" data-color="#fdf1dc"></div>
+          <div class="color blue" data-color="#e3f2fd"></div>
+          <div class="color yellow" data-color="#fff9c4"></div>
+        </div>
+
+        <h3>Filters</h3>
+        <div class="filters">
+          <button data-filter="none">no-filter</button>
+          <button data-filter="grayscale(100%)">black-and-white</button>
+          <button data-filter="sepia(80%)">sepia</button>
+          <button data-filter="brightness(1.2)">warm</button>
+          <button data-filter="contrast(1.2)">cold</button>
+          <button data-filter="hue-rotate(180deg)">cool</button>
+        </div>
+
+        <label style="margin-top: 20px; display: flex; align-items: center; gap: 10px;">
+          <input type="checkbox" id="enableDate" />
+          <span>Enable Date</span>
+        </label>
+
+        <div class="actions">
+          <button id="previewBtn">👁 Preview</button>
+          <button id="downloadBtn">⬇ Download Photostrip</button>
+          <button id="retakeFromEditBtn">📷 Retake Photo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    ➝ Made with ❤️ by haonq
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
